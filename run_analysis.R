@@ -1,6 +1,6 @@
 
 ## Activate directory
-setwd("C://jesus/curso3/UCI HAR Dataset")
+setwd("C://....put your directory")
 
 ##We must have the zip file already extracted in the active directory 
 
