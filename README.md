@@ -34,6 +34,6 @@ ________________________________________________________________________________
 Execution of  "run_analysis.R":
 - The program expects ZIP file to be extracted, in working directory indicated in "run_analysis.R".
 - The variable with the final dataset is allData.meanstd.tidyData
-- The program generates a file with the tidy dataset (FinalFile.txt),  and a codebook in the working directory.
+- The program generates a file with the tidy dataset information (FinalFile.txt),  and a codebook in the working directory.
 
 
