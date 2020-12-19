@@ -18,9 +18,7 @@ escribir <- function(...){
   cat(..., "\n",file=codebookFichero ,append=TRUE, sep="")
 }
 
-log <- function(...) {
-  cat("[run_analysis.R] ", ..., "\n", sep="")
-}
+
 
 escribir("# Code Book")
 escribir("")  
@@ -40,7 +38,7 @@ yTrain = read.table('./train/y_train.txt',header=FALSE)
 
 
 ##We read the tables associated to test
-escribir("# Read the tree files associated to test")
+escribir("# Read the tree files associated to test in variables 'subjectTest','xTest', 'yTest'  respectively.")
 subjectTest = read.table('./test/subject_test.txt',header=FALSE)
 xTest = read.table('./test/x_test.txt',header=FALSE)
 yTest = read.table('./test/y_test.txt',header=FALSE)
@@ -96,7 +94,7 @@ activityTexts = read.table('./activity_labels.txt', header = FALSE)
 
 ##Assign a text instead of an activity code
 
-escribir("On dataset **'allData.meanstd'**,  substitute the code value activity by its text value, indicated in file 'activity_labels.txt'")
+escribir("# On dataset **'allData.meanstd'**,  substitute the code value activity by its text value, indicated in file 'activity_labels.txt'")
 
 
 
@@ -114,7 +112,7 @@ allData.meanstd$activity <- as.factor(allData.meanstd$activity)
 
 ##Associate descriptive name to the columns, by an abbreviature substitution
 
-escribir("On dataset **'allData.meanstd'**, associate a descriptive text to their columns, based on previous inspection of their values")
+escribir("# On dataset **'allData.meanstd'**, associate a descriptive text to their columns, based on previous inspection of their values")
 
 
 
@@ -138,7 +136,7 @@ names(allData.meanstd)<-gsub("Acc", "Accelerometer", names(allData.meanstd))
 
 allData.meanstd$subject <- as.factor(allData.meanstd$subject)
 
-escribir("Aggregate mean values of 'allData.meanstd' by subject,activity,  in a the new variable dataset: **'allData.meanstd.tidyData'** and send its values to file:'FinalFile.txt'")
+escribir("# Aggregate mean values of 'allData.meanstd' by subject,activity,  in a the new variable dataset: **'allData.meanstd.tidyData'** and send its values to file:'FinalFile.txt'")
 
 ##Aggregate by subject / activity with function mean
 allData.meanstd.tidyData <- aggregate(. ~subject + activity, allData.meanstd, mean)
@@ -152,9 +150,9 @@ write.table(allData.meanstd.tidyData, file = "FinalFile.txt", row.names = FALSE)
 ##Explanation of the fields of the final dataset
 escribir("")
 escribir("### Fields for every subject / activity")
-escribir("Field                       -  Description of field")
+escribir("# Field                       -  Description of field")
 escribir("______________________________________")
 Fields <- names(allData.meanstd.tidyData)[3:68]
 for(tdc in Fields ){
-  escribir(paste(tdc,"   -  Mean value of this field for the subject/activity considered "))
+  escribir(paste("# ", tdc,"   -  Mean value of this field for the subject/activity considered "))
 }
