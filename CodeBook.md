@@ -1,7 +1,7 @@
 # Code Book
 
 # We must have the zip file already extracted in the active directory 
-# Read the tree files associated to train
+# Read the tree files associated to train in variables 'subjectTrain','xTrain' and 'yTrain'  respectively.
 # Read the tree files associated to test in variables 'subjectTest','xTest', 'yTest'  respectively.
 # Merge the subject tables in variable:**'subject'** , change colname to 'subject', and add it to variable **'pk'** 
 # Merge the x tables in variable:**'xdata'** and change colnames using text indicated in file features.txt
@@ -11,6 +11,11 @@
 # On dataset **'allData.meanstd'**,  substitute the code value activity by its text value, indicated in file 'activity_labels.txt'
 # On dataset **'allData.meanstd'**, associate a descriptive text to their columns, based on previous inspection of their values
 # Aggregate mean values of 'allData.meanstd' by subject,activity,  in a the new variable dataset: **'allData.meanstd.tidyData'** and send its values to file:'FinalFile.txt'
+
+
+
+
+
 
 ### Fields for every subject / activity
 # Field                       -  Description of field

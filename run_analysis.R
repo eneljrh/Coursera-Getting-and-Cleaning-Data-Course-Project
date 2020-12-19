@@ -31,7 +31,7 @@ escribir("# We must have the zip file already extracted in the active directory 
 
 
 ##We read the tables associated to train
-escribir("# Read the tree files associated to train")
+escribir("# Read the tree files associated to train in variables 'subjectTrain','xTrain' and 'yTrain'  respectively.")
 subjectTrain = read.table('./train/subject_train.txt',header=FALSE)
 xTrain = read.table('./train/x_train.txt',header=FALSE)
 yTrain = read.table('./train/y_train.txt',header=FALSE)
@@ -149,6 +149,12 @@ write.table(allData.meanstd.tidyData, file = "FinalFile.txt", row.names = FALSE)
 
 ##Explanation of the fields of the final dataset
 escribir("")
+escribir("")
+escribir("")
+escribir("")
+escribir("")
+escribir("")
+
 escribir("### Fields for every subject / activity")
 escribir("# Field                       -  Description of field")
 escribir("______________________________________")
